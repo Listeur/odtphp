@@ -1,5 +1,5 @@
 {
-    "name": "silksoftwarehouse/odtphp",
+    "name": "athome/odtphp",
     "description": "ODT document generator",
     "keywords": [
         "odt",
@@ -27,10 +27,5 @@
             "Odtphp\\Test\\": "tests"
         },
         "files": ["lib/pclzip.lib.php"]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.1-dev"
-        }
     }
 }
