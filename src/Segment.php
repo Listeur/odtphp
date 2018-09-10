@@ -32,7 +32,7 @@ class Segment implements \IteratorAggregate, \Countable
     protected $images = array();
     protected $odf;
     protected $file;
-    
+
     /**
      * Constructor
      *
@@ -178,7 +178,7 @@ class Segment implements \IteratorAggregate, \Countable
      */
     public function setImage($key, $value, $page = null, $width = null, $height = null, $offsetX = null, $offsetY = null)
     {
-        $filename = strtok(strrchr($value, '/'), '/.');
+        $filename = uniqid() . strtok(strrchr($value, '/'), '/.');
         $file = substr(strrchr($value, '/'), 1);
         $size = @getimagesize($value);
         if ($size === false) {
@@ -231,7 +231,7 @@ IMG;
             throw new SegmentException("method $meth nor var $meth exist");
         }
     }
-    
+
     /**
      * Returns the parsed XML
      *
